@@ -1,0 +1,30 @@
+$white: #fff;
+$green-border: #4FE24A;
+
+.pictureContainer {
+  height: 300px;
+  width: 268px;
+  border-radius: .5rem;
+  position: relative;
+  padding: 25px;
+  cursor: pointer;
+  .pictureContainer_info {
+    position: absolute;
+    bottom: 30px;
+    button {
+      display: block;
+      margin-bottom: 15px;
+      border-radius: 2rem;
+      padding: .5rem .8rem;
+      border: none;
+    }
+    span {
+      font-size: 2.3rem;
+      color: $white;
+    }
+  }
+}
+
+.chosen {
+  border: 7px solid $green-border;
+}

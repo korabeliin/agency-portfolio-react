@@ -1,0 +1,39 @@
+$white: #fff;
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  position: relative;
+  user-select: none;
+  width: 100%;
+  max-width: 268px;
+  height: 50px;
+  border-radius: .3rem;
+  margin-bottom: 4rem;
+  font-size: 1rem;
+  padding: 10px;
+  color: #391400;
+  background-color: $white;
+  .dropdownBtn {
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .dropdownContent {
+    position: absolute;
+    z-index: 2;
+    top: 110%;
+    padding: 10px;
+    background: $white;
+    left: 0;
+    width: 100%;
+    .dropdownItem {
+      padding: 10px;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover {
+        background: #fcfcfc;
+      }
+    }
+  }
+}

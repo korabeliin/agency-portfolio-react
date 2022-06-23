@@ -1,0 +1,77 @@
+$gray: #707070;
+$green: #16CD53;
+$white: #fff;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicesContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FDF0E9;
+    width: 100vw;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 3rem 0 5rem;
+    .filterButtons {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        max-width: 563px;
+        width: 100%;
+        margin-bottom: 5rem;
+        button {
+            background: none;
+            border: none;
+            color: $gray;
+            font-size: 1rem;
+            &:hover, &:focus {
+                color: $green;
+                outline: none;
+            }
+        }
+    }
+    .selectFilter {
+        width: 100%;
+        max-width: 268px;
+        height: 50px;
+        border: 1px solid #F3D1BF;
+        border-radius: .3rem;
+        margin-bottom: 4rem;
+        font-size: 1rem;
+        padding: 10px;
+        color: #391400;
+    }
+    .moreButton {
+        border: none;
+        background-color: $white;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        border-radius: .3rem;
+        color: #391400;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.servicesGallery {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .servicesGallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .servicesGallery {
+        grid-template-columns: 1fr;
+    }
+}

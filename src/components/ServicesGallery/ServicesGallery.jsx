@@ -16,7 +16,7 @@ const ServicesGallery = ({handleItemClick, onKeyDown, services, servicesCopy}) =
     const handleBtnClick = e => {
         e.preventDefault();
         e.stopPropagation();
-        setFilterType(() => e.target.innerText);
+        setFilterType(e.target.innerText);
     }
 
     const handleOptionClick = e => {
@@ -29,13 +29,13 @@ const ServicesGallery = ({handleItemClick, onKeyDown, services, servicesCopy}) =
         dispatch(LOAD_MORE(servicesCopy))
     }
 
-    const filteredImages = useMemo(() => {
+    const filteredGallery = useMemo(() => {
 
         if(filterType === 'Show All') return services;
 
         return services.filter(img => img.category === filterType);
 
-    }, [handleBtnClick])
+    }, [handleBtnClick, handleOptionClick])
 
     return (
         <section className={styles.servicesContainer}>
@@ -52,7 +52,7 @@ const ServicesGallery = ({handleItemClick, onKeyDown, services, servicesCopy}) =
             }
             <div className={styles.servicesGallery}>
                 <ServicesGalleryItem
-                    services={filterType ? filteredImages : services}
+                    services={filteredGallery}
                     onBtnClick={handleBtnClick}
                     handleItemClick={handleItemClick}
                     onKeyDown={onKeyDown}

@@ -32,17 +32,15 @@ function App() {
     const dispatch = useDispatch();
     const services = useSelector(state => state.services);
 
-    // console.log(services)
-
     const handleItemClick = id => {
         if(window.innerWidth > 1040) {
             dispatch(ITEM_CHOOSE(id));
         }
     }
 
-    const handleDeleteItem = () => {
+  const handleDeleteItem = () => {
         dispatch(ITEM_DELETE());
-    }
+  }
 
   const handleKeyDown = e => {
       if(e.key === 'Delete') {

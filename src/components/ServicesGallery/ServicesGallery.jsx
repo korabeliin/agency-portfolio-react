@@ -41,11 +41,11 @@ const ServicesGallery = ({handleItemClick, onKeyDown, services, servicesCopy}) =
         <section className={styles.servicesContainer}>
             {window.innerWidth > 1040 ?
                 <div className={styles.filterButtons}>
-                    <button autoFocus={true} onClick={handleBtnClick}>Show All</button>
-                    <button onClick={handleBtnClick}>Design</button>
-                    <button onClick={handleBtnClick}>Branding</button>
-                    <button onClick={handleBtnClick}>Illustration</button>
-                    <button onClick={handleBtnClick}>Motion</button>
+                    <button className={filterType === 'Show All' ? styles.active : ''} onClick={handleBtnClick}>Show All</button>
+                    <button className={filterType === 'Design' ? styles.active : ''} onClick={handleBtnClick}>Design</button>
+                    <button className={filterType === 'Branding' ? styles.active : ''} onClick={handleBtnClick}>Branding</button>
+                    <button className={filterType === 'Illustration' ? styles.active : ''} onClick={handleBtnClick}>Illustration</button>
+                    <button className={filterType === 'Motion' ? styles.active : ''} onClick={handleBtnClick}>Motion</button>
                 </div>
                 :
                 <Dropdown handleOptionClick={handleOptionClick} selected={selected} setSelected={setSelected} />

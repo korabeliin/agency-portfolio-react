@@ -29,7 +29,7 @@ $white: #fff;
             border: none;
             color: $gray;
             font-size: 1rem;
-            &:hover, &:focus {
+            &:hover, &:focus, &.active {
                 color: $green;
                 outline: none;
             }
